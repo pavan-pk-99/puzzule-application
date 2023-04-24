@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Click Image to Display Message</title>
+    <style>
+        #pop{
+            width: 300px;
+            height: 200px;
+            display:none;
+            background-color:#fff;
+            border-radius: 20px;
+            box-shadow: 0px 0px 12px;
+            color:red;
+            position: absolute;
+            top:10%;
+            left: 10%;
+            margin-left:50%;
+            margin-top:20%;
+        }
+        #m{
+            font-size: 25px;
+            font-weight: 600;
+            text-align: center;
+        }
+        #s{
+            font-size: 30px;
+            font-weight: 700;
+            text-align: center;
+        }
+    </style>
+  </head>
+  <body>
+    <h2 style="margin-left:50%;color:aquamarine;">Find the key in the Image that will be your answer...?</h2>
+    <h4>click on the object and  get reward to win the game</h4>
+    <img src="a.jpg" style=" margin-top:-5%;" id="myImage"height="700px" onclick="displayMessage(event)">
+    <p id="message">100</p>
+    <div id="pop">
+        <p id="m">you win</p>
+        <h3 id="s">100</h3>
+        <a href="user.html"><button style="background-color: rgb(105, 162, 105);color:red;width: 80px;height: 40px;margin-left:40%;border-radius: 5px;">Next</button></a>
+        
+    </div>
+  </body>
+  <script>
+    function displayMessage(event) {
+  var message = document.getElementById("message");
+  var block=document.getElementById('pop');
+  console.log(block)
+  var sc=document.getElementById('m').innerHTML;
+  var s=document.getElementById('s').innerHTML;
+  var x = event.clientX;
+  var y = event.clientY;
+ console.log(x,y);
+  if (x <=610&&x>=590 && y <= 590&&y>=560) {
+    var score=message.innerHTML;
+    score=parseInt(score);
+    message.innerHTML=score+100;
+    document.getElementById('m').innerHTML="you won";
+    s=parseInt(s);
+
+    s=s+100;
+    document.getElementById('s').innerHTML=s;
+    block.style.bgcolor="green";
+    block.style.display="block";
+    
+    
+  } 
+  else{
+    var score=message.innerHTML;
+    score=parseInt(score);
+    message.innerHTML=score-50;
+    document.getElementById('m').innerHTML="you lost";
+    s=parseInt(s);
+    document.getElementById('s').innerHTML=s-50;
+    block.style.bgcolor="red";
+    block.style.display="block";
+    
+  }
+}
+
+  </script>
+</html>

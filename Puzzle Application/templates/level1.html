@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background:url('l1bg.jpeg');
+        }
+        .quation_box{
+            width: 600px;
+            height: 200px;
+            background-color: #fff;
+            opacity: 1;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 2%;
+            margin-left:25%;
+            text-align: center;
+            padding-right: 120px;
+            padding-left:-50px;
+            padding-top:10px;
+            border-radius:10px;
+            box-shadow: 0px 0px 20px;
+
+        }
+        .quation_box p {
+            margin-left:18%;
+        }
+        form{
+            width: 1000px;
+            height: 250px;
+            background-color: #ffffff;
+            opacity:0.8;
+            margin-top:7%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px;
+            margin-left:15%;
+            align-items: center;
+            text-align: center;
+        }
+        input[type="text"]{
+            border:none;
+            box-shadow: 0px 0px 7px;
+            font-size: 20px;
+            width: 60%;
+            border-radius: 10px;
+            height: 30px;
+            margin-top:5%;
+        }
+         form label{
+            font-size: 35px;
+            color:#222a68;
+            margin-top:10%;
+        }
+        #btt{
+            width: 60px;
+            height: 30px;
+            background-color: #ff0a54;
+            color:#fff;
+        }
+        #btt:hover{
+            background-color: green;
+            color:#ff0a54;
+        }
+        a {
+            text-decoration: none;
+            width: 110px;
+            height: 30px;
+            background-color: green;
+            color:#ffffff
+        }
+         a :hover{
+            background-color: red;
+         }
+        button{
+            margin-top:50px;
+            margin-left:20px;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="quation_box">
+        <h3 style="text-align: center;color:#ff0a54;font-size: 25px;margin-left:120px;">Who I am ?</h3>
+        <p><pre>
+            I get cut but I never bleed
+            I have teeth but I don’t bite
+            I get put on a ring but I’m not a diamond
+            I get turned but I’m not a page
+            I get put in a lock but I’m not a wrestler
+        </pre></p>
+    </div>
+        <form action="{{ url_for('level1') }}" method="post">
+            <label for="answer">Enter Your Answer:</label><br>
+            <input type="text"  name="uans"placeholder="Type here...."><br>
+            <button type="submit" id="btt">submit</button>
+            <a href="https://www.bing.com/images/search?view=detailV2&ccid=zqnruDJ2&id=B7ECC375614D9B0567A8B2D5F08FD30D1C528D67&thid=OIP.zqnruDJ2diP2RG4OV8PI1QHaIH&mediaurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.cea9ebb832767623f6446e0e57c3c8d5%3frik%3dZ41SHA3Tj%252fDVsg%26riu%3dhttp%253a%252f%252fblackhawkchristian.files.wordpress.com%252f2012%252f02%252fgoldkey1.jpg%26ehk%3d6OYFWebjlvHd5UKWV31Crx7remGFyfslAKavSHxr8tY%253d%26risl%3d%26pid%3dImgRaw%26r%3d0&exph=1450&expw=1324&q=key&simid=608043558572282518&FORM=IRPRST&ck=52469BC03A5C6E31A473946317BC6DA2&selectedIndex=0&ajaxhist=0&ajaxserp=0">Get clue</a>
+
+        </form>
+    
+</body>
+</html>
